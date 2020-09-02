@@ -44,4 +44,31 @@ for (const routa of route) {
   estrazioni[routa] = estrazione;
 }
 
-console.log(JSON.stringify(estrazioni, null, 2));
+function createRuotaCnt(ruotaName: string, estrazioni: number[]) {
+  const routaDiv = document.createElement('div');
+  routaDiv.className = `ruota ${ruotaName.toLowerCase()}`;
+  const nameH2 = document.createElement('h2');
+  nameH2.innerText = ruotaName;
+  nameH2.className = 'ruota-title';
+  routaDiv.appendChild(nameH2);
+
+  for (const num of estrazioni) {
+    const numP = document.createElement('p');
+    numP.innerText = '' + num;
+    numP.className = 'ruota-estrazione';
+    routaDiv.appendChild(numP);
+  }
+
+  return routaDiv;
+}
+
+const container = document.getElementById('cnt');
+if (container) {
+  const pre = document.createElement('pre');
+
+  for (const ruota of route) {
+    const ruotaEstrazioni = estrazioni[ruota];
+    const routaDiv = createRuotaCnt(ruota, ruotaEstrazioni);
+    container.appendChild(routaDiv);
+  }
+}
