@@ -55,8 +55,10 @@ function createRuotaCnt(ruotaName: string, estrazioni: number[]) {
   for (const num of estrazioni) {
     const numP = document.createElement('p');
     numP.innerText = '' + num;
-    numP.className = 'ruota-estrazione';
-    routaDiv.appendChild(numP);
+    const numDiv = document.createElement('div');
+    numDiv.className = 'ruota-estrazione';
+    numDiv.appendChild(numP);
+    routaDiv.appendChild(numDiv);
   }
 
   return routaDiv;
