@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Estrazione Enalotto</title>
+
+    <style>
+      .ruota {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+
+      .main {
+        font-family: sans-serif;
+        max-width: 700px;
+        width: 90%;
+        margin: auto;
+      }
+
+      .nazionale {
+        color: red;
+        border-top: 1px solid #ccc;
+      }
+
+      h2.ruota-title {
+        width: 150px;
+      }
+
+      .ruota-estrazione {
+        background-color: rgb(130, 185, 202);
+        width: 40px;
+        height: 40px;
+        vertical-align: middle;
+        text-align: center;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        color: white;
+      }
+
+      .ruota-estrazione > p {
+        padding: 0;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <h1>Estrazione Enalotto</h1>
+      <div id="cnt"></div>
+    </div>
+    <script src="/bundle.js" type="module"></script>
+  </body>
+</html>
